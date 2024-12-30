@@ -14,7 +14,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        // Add custom items to the 'axes' tag
         getOrCreateTagBuilder(ItemTags.SHARP_WEAPON_ENCHANTABLE)
                 .add(ModItems.ECHO_KNIFE)
                 .add(ModItems.COPPER_KNIFE)
