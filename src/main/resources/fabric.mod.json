@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "customlifestealweapons",
+	"version": "${version}",
+	"name": "customlifestealweapons",
+	"description": "Custom weapons made for lifesteal",
+	"authors": [
+		"Beez131", "PhoenixRising"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/customlifestealweapons/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.beez131.customlifestealweapons.Customlifestealweapons"
+		],
+		"datagen": [
+			"net.beez131.customlifestealweapons.CustomlifestealweaponsDataGenerator"
+		],
+		"client": [
+			"net.beez131.customlifestealweapons.CustomLifestealweaponsClient"
+		]
+	},
+	"mixins": [
+		"customlifestealweapons.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

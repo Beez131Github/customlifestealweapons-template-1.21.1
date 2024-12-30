@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "combat",
+  "key": {
+    "#": {
+      "item": "minecraft:quartz"
+    },
+    "*": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "   ",
+    " # ",
+    " * "
+  ],
+  "result": {
+    "count": 1,
+    "id": "customlifestealweapons:quartz_knife"
+  }
+}
