@@ -11,6 +11,8 @@ import net.minecraft.item.TridentItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.beez131.customlifestealweapons.item.custom.PoisonWeaponItem;
+
 
 public class ModItems {
 
@@ -30,6 +32,13 @@ public class ModItems {
             new AxeItem(ModToolMaterials.ECHO, new Item.Settings()
                     .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.ECHO, 2, -2.1f))));
 
+    public static final Item POISON_KNIFE = registerItem("poison_knife",
+            new PoisonWeaponItem(ModToolMaterials.POISON, new Item.Settings()
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.POISON, 2, -2.1f))));
+
+
+    public static final Item POISON_SHARD = registerItem("poison_shard", new Item(new Item.Settings()));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Customlifestealweapons.MOD_ID, name), item);
     }
@@ -42,6 +51,10 @@ public class ModItems {
             entries.add(ECHO_KNIFE);
             entries.add(QUARTZ_KNIFE);
             entries.add(COPPER_KNIFE);
+            entries.add(POISON_KNIFE);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+            entries.add(POISON_SHARD);
         });
     }
 }

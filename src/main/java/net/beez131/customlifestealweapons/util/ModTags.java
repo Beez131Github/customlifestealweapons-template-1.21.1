@@ -21,13 +21,16 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_ECHO_TOOL = createTag("needs_echo_tool");
         public static final TagKey<Block> INCORRECT_FOR_ECHO_TOOL = createTag("incorrect_for_echo_tool");
 
+        public static final TagKey<Block> NEEDS_POISON_TOOL = createTag("needs_poison_tool");
+        public static final TagKey<Block> INCORRECT_FOR_POISON_TOOL = createTag("incorrect_for_poison_tool");
+
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(Customlifestealweapons.MOD_ID, name));
         }
     }
 
     public static class Items {
-        public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
+        public static final TagKey<Item> POISON_WEAPONS = createTag("poison_item");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(Customlifestealweapons.MOD_ID, name));

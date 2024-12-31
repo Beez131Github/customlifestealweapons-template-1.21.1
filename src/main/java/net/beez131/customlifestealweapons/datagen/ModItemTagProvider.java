@@ -18,11 +18,13 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.ECHO_KNIFE)
                 .add(ModItems.COPPER_KNIFE)
                 .add(ModItems.QUARTZ_KNIFE)
+                .add(ModItems.POISON_KNIFE)
                 .add(ModItems.AMETHYST_KNIFE);
         getOrCreateTagBuilder(ItemTags.DURABILITY_ENCHANTABLE)
                 .add(ModItems.ECHO_KNIFE)
                 .add(ModItems.COPPER_KNIFE)
                 .add(ModItems.QUARTZ_KNIFE)
+                .add(ModItems.POISON_KNIFE)
                 .add(ModItems.AMETHYST_KNIFE);
     }
 }

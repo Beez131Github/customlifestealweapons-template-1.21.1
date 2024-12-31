@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "combat",
+  "key": {
+    "#": {
+      "item": "customlifestealweapons:poison_shard"
+    },
+    "*": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "   ",
+    " # ",
+    " * "
+  ],
+  "result": {
+    "count": 1,
+    "id": "customlifestealweapons:poison_knife"
+  }
+}
