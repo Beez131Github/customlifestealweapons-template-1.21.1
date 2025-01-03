@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "combat",
+  "key": {
+    "#": {
+      "item": "customlifestealweapons:weakness_shard"
+    },
+    "*": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " ##",
+    " *#",
+    " * "
+  ],
+  "result": {
+    "count": 1,
+    "id": "customlifestealweapons:weakness_axe"
+  }
+}

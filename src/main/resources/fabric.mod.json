@@ -1,11 +1,11 @@
 {
 	"schemaVersion": 1,
 	"id": "customlifestealweapons",
-	"version": "${version}",
-	"name": "customlifestealweapons",
-	"description": "Custom weapons made for lifesteal",
+	"version": "1.0.1",
+	"name": "Custom Lifesteal Weapons",
+	"description": "A mod that adds custom weapons for lifesteal gameplay.",
 	"authors": [
-		"Beez131", "PhoenixRising"
+		"Beez131"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -16,13 +16,22 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.beez131.customlifestealweapons.Customlifestealweapons"
+			{
+				"adapter": "default",
+				"value": "net.beez131.customlifestealweapons.Customlifestealweapons"
+			}
 		],
 		"fabric-datagen": [
-			"net.beez131.customlifestealweapons.CustomlifestealweaponsDataGenerator"
+			{
+				"adapter": "default",
+				"value": "net.beez131.customlifestealweapons.CustomlifestealweaponsDataGenerator"
+			}
 		],
 		"client": [
-			"net.beez131.customlifestealweapons.CustomLifestealweaponsClient"
+			{
+				"adapter": "default",
+				"value": "net.beez131.customlifestealweapons.CustomLifestealweaponsClient"
+			}
 		]
 	},
 	"mixins": [
@@ -30,8 +39,8 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.16.9",
-		"minecraft": "~1.21.1",
-		"java": ">=21",
+		"minecraft": "1.21.1",
+		"java": ">=17",
 		"fabric-api": "*"
 	},
 	"suggests": {

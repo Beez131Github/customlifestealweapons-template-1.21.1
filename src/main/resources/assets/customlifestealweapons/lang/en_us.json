@@ -4,5 +4,20 @@
   "item.customlifestealweapons.quartz_knife": "Quartz Knife",
   "item.customlifestealweapons.echo_knife": "Echo Knife",
   "item.customlifestealweapons.poison_shard": "Poison Shard",
-  "item.customlifestealweapons.poison_knife": "Poison Knife"
+  "item.customlifestealweapons.weakness_axe": "Weakness Axe",
+  "item.customlifestealweapons.vision_sword": "Vision Sword",
+  "item.customlifestealweapons.weakness_shard": "Weakness Shard",
+  "item.customlifestealweapons.glow_shard": "Glow Shard",
+  "item.customlifestealweapons.speed_sword": "Speed Sword",
+  "item.customlifestealweapons.jump_sword": "Jump Sword",
+  "item.customlifestealweapons.poison_knife": "Poison Knife",
+  "item.customlifestealweapons.aetherwave_sword": "Aetherwave Sword",
+
+  "key.customlifestealweapons.speed_mainhand": "AetherWave Speed",
+  "key.customlifestealweapons.jumpboost_mainhand": "AetherWave Jump Boost",
+  "key.customlifestealweapons.dolphinsgrace_offhand": "AetherWave Dolphin's Grace",
+  "key.customlifestealweapons.levitation_offhand": "AetherWave Levitation",
+
+  "category.customlifestealweapons.mainhand": "AetherWave - Mainhand",
+  "category.customlifestealweapons.offhand": "AetherWave - Offhand"
 }

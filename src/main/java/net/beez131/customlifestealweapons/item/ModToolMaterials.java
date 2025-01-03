@@ -13,11 +13,17 @@ import net.minecraft.registry.tag.TagKey;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    AMETHYST(ModTags.Blocks.INCORRECT_FOR_AMETHYST_TOOL, 250, 0.0F, 2.0F, 20, () -> Ingredient.ofItems(Items.AMETHYST_SHARD)),
-    COPPER(ModTags.Blocks.INCORRECT_FOR_COPPER_TOOL, 131, 0.0F, 1.0F, 15, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
-    QUARTZ(ModTags.Blocks.INCORRECT_FOR_QUARTZ_TOOL, 1561, 0.0F, 3.0F, 25, () -> Ingredient.ofItems(Items.QUARTZ)),
-    ECHO(ModTags.Blocks.INCORRECT_FOR_ECHO_TOOL, 2031, 0.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.ECHO_SHARD)),
-    POISON(ModTags.Blocks.INCORRECT_FOR_POISON_TOOL, 4062, 0.0F, 5.0F, 30, () -> Ingredient.ofItems(Items.FLINT));
+    AMETHYST(ModTags.Blocks.INCORRECT_FOR_AMETHYST_TOOL, 250, 1.0F, 2.0F, 20, () -> Ingredient.ofItems(Items.AMETHYST_SHARD)),
+    COPPER(ModTags.Blocks.INCORRECT_FOR_COPPER_TOOL, 131, 1.0F, 1.0F, 15, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
+    QUARTZ(ModTags.Blocks.INCORRECT_FOR_QUARTZ_TOOL, 1561, 1.0F, 3.0F, 25, () -> Ingredient.ofItems(Items.QUARTZ)),
+    ECHO(ModTags.Blocks.INCORRECT_FOR_ECHO_TOOL, 2031, 1.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.ECHO_SHARD)),
+    WEAKNESS(ModTags.Blocks.INCORRECT_FOR_WEAKNESS_TOOL, 4062, 10.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FERMENTED_SPIDER_EYE)),
+    VISION(ModTags.Blocks.INCORRECT_FOR_VISION_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.GLOWSTONE_DUST)),
+    SPEED(ModTags.Blocks.INCORRECT_FOR_SPEED_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.SUGAR)),
+    JUMP(ModTags.Blocks.INCORRECT_FOR_JUMP_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.RABBIT_FOOT)),
+    AETHER(ModTags.Blocks.INCORRECT_FOR_AETHERWAVE_TOOL, 4062, 6.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.RABBIT_FOOT)),
+    POISON(ModTags.Blocks.INCORRECT_FOR_POISON_TOOL, 4062, 1.0F, 5.0F, 30, () -> Ingredient.ofItems(Items.FLINT));
+
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

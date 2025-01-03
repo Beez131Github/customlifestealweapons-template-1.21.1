@@ -1,18 +1,15 @@
 package net.beez131.customlifestealweapons.item;
 
 import net.beez131.customlifestealweapons.Customlifestealweapons;
+import net.beez131.customlifestealweapons.item.custom.*;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.AxeItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.TridentItem;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.beez131.customlifestealweapons.item.custom.PoisonWeaponItem;
-
+//import net.beez131.customlifestealweapons.item.custom.KnifeItem;
 
 public class ModItems {
 
@@ -36,8 +33,33 @@ public class ModItems {
             new PoisonWeaponItem(ModToolMaterials.POISON, new Item.Settings()
                     .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.POISON, 2, -2.1f))));
 
+    public static final Item WEAKNESS_AXE = registerItem("weakness_axe",
+            new WeaknessAxeItem(ModToolMaterials.WEAKNESS, new Item.Settings()
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.WEAKNESS, 5, -3.0f))));
 
+    public static final Item VISION_SWORD = registerItem("vision_sword",
+            new VisionSwordItem(ModToolMaterials.VISION, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.VISION, 3, -2.4f))));
+
+    public static final Item SPEED_SWORD = registerItem("speed_sword",
+            new SpeedSwordItem(ModToolMaterials.SPEED, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.SPEED, 3, -2.3f))));
+
+    public static final Item JUMP_SWORD = registerItem("jump_sword",
+            new JumpWeaponItem(ModToolMaterials.JUMP, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.JUMP, 4, -2.5f))));
+
+    public static final Item AETHERWAVE_SWORD = registerItem("aetherwave_sword",
+            new AetherWaveSwordItem(ModToolMaterials.AETHER, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.AETHER, 4, -2.3f))));
+
+
+    // Shards
     public static final Item POISON_SHARD = registerItem("poison_shard", new Item(new Item.Settings()));
+    public static final Item GLOW_SHARD = registerItem("glow_shard", new Item(new Item.Settings()));
+    public static final Item WEAKNESS_SHARD = registerItem("weakness_shard", new Item(new Item.Settings()));
+
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Customlifestealweapons.MOD_ID, name), item);
@@ -52,9 +74,16 @@ public class ModItems {
             entries.add(QUARTZ_KNIFE);
             entries.add(COPPER_KNIFE);
             entries.add(POISON_KNIFE);
+            entries.add(WEAKNESS_AXE);
+            entries.add(VISION_SWORD);
+            entries.add(SPEED_SWORD);
+            entries.add(JUMP_SWORD);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(POISON_SHARD);
+            entries.add(WEAKNESS_SHARD);
+            entries.add(GLOW_SHARD);
+
         });
     }
 }

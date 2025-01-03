@@ -24,6 +24,21 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_POISON_TOOL = createTag("needs_poison_tool");
         public static final TagKey<Block> INCORRECT_FOR_POISON_TOOL = createTag("incorrect_for_poison_tool");
 
+        public static final TagKey<Block> NEEDS_VISION_TOOL = createTag("needs_vision_tool");
+        public static final TagKey<Block> INCORRECT_FOR_VISION_TOOL = createTag("incorrect_for_vision_tool");
+
+        public static final TagKey<Block> NEEDS_WEAKNESS_TOOL = createTag("needs_weakness_tool");
+        public static final TagKey<Block> INCORRECT_FOR_WEAKNESS_TOOL = createTag("incorrect_for_weakness_tool");
+
+        public static final TagKey<Block> NEEDS_SPEED_TOOL = createTag("needs_speed_tool");
+        public static final TagKey<Block> INCORRECT_FOR_SPEED_TOOL = createTag("incorrect_for_speed_tool");
+
+        public static final TagKey<Block> NEEDS_JUMP_TOOL = createTag("needs_jump_tool");
+        public static final TagKey<Block> INCORRECT_FOR_JUMP_TOOL = createTag("incorrect_for_jump_tool");
+
+        public static final TagKey<Block> NEEDS_AETHERWAVE_TOOL = createTag("needs_aetherwave_tool");
+        public static final TagKey<Block> INCORRECT_FOR_AETHERWAVE_TOOL = createTag("incorrect_for_aetherwave_tool");
+
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(Customlifestealweapons.MOD_ID, name));
         }

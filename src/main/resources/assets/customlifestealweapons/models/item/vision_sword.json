@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "customlifestealweapons:item/poison_knife"
+    "layer0": "customlifestealweapons:item/vision_sword"
   }
 }
