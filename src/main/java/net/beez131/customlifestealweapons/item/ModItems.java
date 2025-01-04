@@ -53,6 +53,14 @@ public class ModItems {
             new AetherWaveSwordItem(ModToolMaterials.AETHER, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.AETHER, 4, -2.3f))));
 
+    public static final Item FLIGHT_SWORD = registerItem("flight_sword",
+            new FlySwordItem(ModToolMaterials.FLIGHT, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.FLIGHT, 3, -2.3f))));
+
+    public static final Item RESISTANCE_SWORD = registerItem("resistance_sword",
+            new ResistanceSwordItem(ModToolMaterials.RESISTANCE, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RESISTANCE, 3, -2.45f))));
+
 
     // Shards
     public static final Item POISON_SHARD = registerItem("poison_shard", new Item(new Item.Settings()));
@@ -77,6 +85,7 @@ public class ModItems {
             entries.add(WEAKNESS_AXE);
             entries.add(VISION_SWORD);
             entries.add(SPEED_SWORD);
+            entries.add(AETHERWAVE_SWORD);
             entries.add(JUMP_SWORD);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {

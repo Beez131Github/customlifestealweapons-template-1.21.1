@@ -6,9 +6,13 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class SpeedSwordItem extends SwordItem {
     public SpeedSwordItem(ToolMaterial material, Settings settings) {
@@ -36,6 +40,11 @@ public class SpeedSwordItem extends SwordItem {
         }
 
         return TypedActionResult.success(stack, world.isClient());
+    }
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        tooltip.add(Text.translatable("tooltip.customlifestealweapons.speed.tooltip"));
+        super.appendTooltip(stack, context, tooltip, type);
     }
 }
 

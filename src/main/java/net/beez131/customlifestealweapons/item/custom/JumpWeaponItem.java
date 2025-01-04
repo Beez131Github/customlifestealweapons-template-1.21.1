@@ -6,9 +6,13 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class JumpWeaponItem extends SwordItem {
     public JumpWeaponItem(ToolMaterial material, Settings settings) {
@@ -24,7 +28,7 @@ public class JumpWeaponItem extends SwordItem {
                 // Check if the weapon is in the offhand or mainhand
                 if (hand == Hand.MAIN_HAND) {
                     // Apply Jump Boost and Dolphin's Grace when held in the main hand
-                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 60, 2));  // Jump Boost level 10
+                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 100, 2));  // Jump Boost level 10
                 } else if (hand == Hand.OFF_HAND) {
                     // Apply Levitation when held in the offhand
                     user.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 30, 19));  // Levitation level 1
@@ -36,5 +40,10 @@ public class JumpWeaponItem extends SwordItem {
         }
 
         return TypedActionResult.success(stack, world.isClient());
+    }
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        tooltip.add(Text.translatable("tooltip.customlifestealweapons.jump.tooltip"));
+        super.appendTooltip(stack, context, tooltip, type);
     }
 }

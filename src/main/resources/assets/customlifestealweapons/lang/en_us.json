@@ -11,7 +11,16 @@
   "item.customlifestealweapons.speed_sword": "Speed Sword",
   "item.customlifestealweapons.jump_sword": "Jump Sword",
   "item.customlifestealweapons.poison_knife": "Poison Knife",
+  "item.customlifestealweapons.resistance_sword": "Resistance Sword",
   "item.customlifestealweapons.aetherwave_sword": "Aetherwave Sword",
+  "item.customlifestealweapons.flight_sword": "Flight Sword",
+
+  "tooltip.customlifestealweapons.passive.tooltip": "§5Passives:§",
+  "tooltip.customlifestealweapons.speed.tooltip": "§3Speed§",
+  "tooltip.customlifestealweapons.resistance.tooltip": "§8Resistance§",
+  "tooltip.customlifestealweapons.slow_falling.tooltip": "§9Slow Falling§",
+  "tooltip.customlifestealweapons.jump.tooltip": "§2Instant Jump§",
+  "tooltip.customlifestealweapons.space.tooltip": " ",
 
   "key.customlifestealweapons.speed_mainhand": "AetherWave Speed",
   "key.customlifestealweapons.jumpboost_mainhand": "AetherWave Jump Boost",

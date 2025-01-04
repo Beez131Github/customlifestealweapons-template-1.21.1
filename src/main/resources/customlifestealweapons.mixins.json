@@ -3,11 +3,7 @@
 	"package": "net.beez131.customlifestealweapons.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"LivingEntityAccessor",
 		"PlayerEntityMixin"
-	],
-	"accessors": [
-		"LivingEntityAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1

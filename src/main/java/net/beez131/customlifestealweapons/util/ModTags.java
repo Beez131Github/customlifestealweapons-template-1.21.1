@@ -39,6 +39,12 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_AETHERWAVE_TOOL = createTag("needs_aetherwave_tool");
         public static final TagKey<Block> INCORRECT_FOR_AETHERWAVE_TOOL = createTag("incorrect_for_aetherwave_tool");
 
+        public static final TagKey<Block> NEEDS_FLIGHT_TOOL = createTag("needs_flight_tool");
+        public static final TagKey<Block> INCORRECT_FOR_FLIGHT_TOOL = createTag("incorrect_for_flight_tool");
+
+        public static final TagKey<Block> NEEDS_RESISTANCE_TOOL = createTag("needs_resistance_tool");
+        public static final TagKey<Block> INCORRECT_FOR_RESISTANCE_TOOL = createTag("incorrect_for_resistance_tool");
+
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(Customlifestealweapons.MOD_ID, name));
         }
