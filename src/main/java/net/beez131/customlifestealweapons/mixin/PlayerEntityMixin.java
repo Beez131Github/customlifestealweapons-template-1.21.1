@@ -64,7 +64,6 @@ public class PlayerEntityMixin {
                     || offHand.getItem() instanceof FlySwordItem;
 
             if (isHoldingSlowFallingSword) {
-                // Apply Speed I effect (duration = 2 seconds, refreshes every tick)
                 player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 2, 0, false, true));
             }
         }
