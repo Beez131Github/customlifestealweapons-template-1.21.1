@@ -14,9 +14,9 @@ import net.minecraft.entity.effect.StatusEffects;
 
 import java.util.List;
 
-public class ResistanceSwordItem extends SwordItem {
+public class RapidAegisSwordItem extends SwordItem {
 
-    public ResistanceSwordItem(ToolMaterial material, Settings settings) {
+    public RapidAegisSwordItem(ToolMaterial material, Settings settings) {
         super(material, settings);
     }
 
@@ -27,8 +27,10 @@ public class ResistanceSwordItem extends SwordItem {
         if (!world.isClient()) {
             if (!user.getItemCooldownManager().isCoolingDown(this)) {
                 if (hand == Hand.MAIN_HAND) {
+                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 60, 9));
                     user.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 60, 4));
                 } else if (hand == Hand.OFF_HAND) {
+                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 100, 0));
                     user.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 1200, 0));
                 }
 
@@ -41,6 +43,7 @@ public class ResistanceSwordItem extends SwordItem {
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {;
+        tooltip.add(Text.translatable("tooltip.customlifestealweapons.speed.tooltip"));
         tooltip.add(Text.translatable("tooltip.customlifestealweapons.resistance.tooltip"));
         tooltip.add(Text.translatable("tooltip.customlifestealweapons.heavystep.tooltip")); //heavystep
         super.appendTooltip(stack, context, tooltip, type);

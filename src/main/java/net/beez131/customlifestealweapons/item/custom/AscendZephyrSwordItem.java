@@ -12,12 +12,14 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 
 import java.util.List;
 
-public class FlySwordItem extends SwordItem {
+public class AscendZephyrSwordItem extends SwordItem {
 
-    public FlySwordItem(ToolMaterial toolMaterial, Settings settings) {
+    public AscendZephyrSwordItem(ToolMaterial toolMaterial, Settings settings) {
         super(toolMaterial, settings);
     }
 
@@ -26,6 +28,17 @@ public class FlySwordItem extends SwordItem {
         ItemStack stack = user.getStackInHand(hand);
 
         if (!world.isClient()) {
+
+            // Apply Speed effect if held in main hand
+            if (hand == Hand.MAIN_HAND) {
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 100, 2));
+            }
+
+            // Apply Dolphin's Grace effect if held in offhand
+            if (hand == Hand.OFF_HAND) {
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 30, 19));  // Levitation
+            }
+
             if (!user.getAbilities().allowFlying) {
                 user.getAbilities().allowFlying = true;
                 user.getAbilities().flying = true;
@@ -52,6 +65,8 @@ public class FlySwordItem extends SwordItem {
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {;
         tooltip.add(Text.translatable("tooltip.customlifestealweapons.slow_falling.tooltip"));
+        tooltip.add(Text.translatable("tooltip.customlifestealweapons.jump.tooltip"));
+        tooltip.add(Text.translatable("tooltip.customlifestealweapons.featherstep.tooltip"));
         super.appendTooltip(stack, context, tooltip, type);
     }
 }

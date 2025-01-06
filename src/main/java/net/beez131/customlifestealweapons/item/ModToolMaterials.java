@@ -21,7 +21,9 @@ public enum ModToolMaterials implements ToolMaterial {
     VISION(ModTags.Blocks.INCORRECT_FOR_VISION_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.GLOWSTONE_DUST)),
     SPEED(ModTags.Blocks.INCORRECT_FOR_SPEED_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.SUGAR)),
     JUMP(ModTags.Blocks.INCORRECT_FOR_JUMP_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.RABBIT_FOOT)),
-    AETHER(ModTags.Blocks.INCORRECT_FOR_AETHERWAVE_TOOL, 4062, 6.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.REDSTONE)),
+    AETHER(ModTags.Blocks.INCORRECT_FOR_AETHERWAVE_TOOL, 4062, 6.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FLINT)),
+    ASCEND(ModTags.Blocks.INCORRECT_FOR_ASCEND_TOOL, 4062, 6.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FLINT)),
+    RAPID(ModTags.Blocks.INCORRECT_FOR_RAPID_TOOL, 4062, 6.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FLINT)),
     FLIGHT(ModTags.Blocks.INCORRECT_FOR_FLIGHT_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FEATHER)),
     RESISTANCE(ModTags.Blocks.INCORRECT_FOR_RESISTANCE_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.OBSIDIAN)),
     POISON(ModTags.Blocks.INCORRECT_FOR_POISON_TOOL, 4062, 1.0F, 5.0F, 30, () -> Ingredient.ofItems(Items.FLINT));

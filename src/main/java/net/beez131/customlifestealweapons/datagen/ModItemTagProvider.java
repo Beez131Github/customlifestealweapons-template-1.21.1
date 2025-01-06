@@ -26,6 +26,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.AETHERWAVE_SWORD)
                 .add(ModItems.FLIGHT_SWORD)
                 .add(ModItems.RESISTANCE_SWORD)
+                .add(ModItems.RAPID_SWORD)
+                .add(ModItems.ASCENDZEPHYR_SWORD)
                 .add(ModItems.AMETHYST_KNIFE);
         getOrCreateTagBuilder(ItemTags.DURABILITY_ENCHANTABLE)
                 .add(ModItems.ECHO_KNIFE)
@@ -37,8 +39,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.JUMP_SWORD)
                 .add(ModItems.SPEED_SWORD)
                 .add(ModItems.AETHERWAVE_SWORD)
+                .add(ModItems.ASCENDZEPHYR_SWORD)
                 .add(ModItems.FLIGHT_SWORD)
                 .add(ModItems.RESISTANCE_SWORD)
+                .add(ModItems.RAPID_SWORD)
                 .add(ModItems.AMETHYST_KNIFE);
         getOrCreateTagBuilder(ItemTags.SWORD_ENCHANTABLE)
                 .add(ModItems.JUMP_SWORD)
@@ -46,6 +50,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.AETHERWAVE_SWORD)
                 .add(ModItems.FLIGHT_SWORD)
                 .add(ModItems.RESISTANCE_SWORD)
+                .add(ModItems.ASCENDZEPHYR_SWORD)
+                .add(ModItems.RAPID_SWORD)
                 .add(ModItems.VISION_SWORD);
         getOrCreateTagBuilder(ItemTags.MINING_ENCHANTABLE)
                 .add(ModItems.WEAKNESS_AXE);

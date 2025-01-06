@@ -49,6 +49,14 @@ public class ModItems {
             new JumpWeaponItem(ModToolMaterials.JUMP, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.JUMP, 4, -2.5f))));
 
+    public static final Item ASCENDZEPHYR_SWORD = registerItem("ascendzephyr_sword",
+            new AscendZephyrSwordItem(ModToolMaterials.ASCEND, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.ASCEND, 4, -2.3f))));
+
+    public static final Item RAPID_SWORD = registerItem("rapidaegis_sword",
+            new RapidAegisSwordItem(ModToolMaterials.RAPID, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RAPID, 4, -2.3f))));
+
     public static final Item AETHERWAVE_SWORD = registerItem("aetherwave_sword",
             new AetherWaveSwordItem(ModToolMaterials.AETHER, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.AETHER, 4, -2.3f))));
@@ -59,7 +67,7 @@ public class ModItems {
 
     public static final Item RESISTANCE_SWORD = registerItem("resistance_sword",
             new ResistanceSwordItem(ModToolMaterials.RESISTANCE, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RESISTANCE, 3, -2.45f))));
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RESISTANCE, 3, -2.5f))));
 
 
     // Shards
@@ -85,8 +93,12 @@ public class ModItems {
             entries.add(WEAKNESS_AXE);
             entries.add(VISION_SWORD);
             entries.add(SPEED_SWORD);
-            entries.add(AETHERWAVE_SWORD);
             entries.add(JUMP_SWORD);
+            entries.add(FLIGHT_SWORD);
+            entries.add(RESISTANCE_SWORD);
+            entries.add(ASCENDZEPHYR_SWORD);
+            entries.add(RAPID_SWORD);
+            entries.add(AETHERWAVE_SWORD);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(POISON_SHARD);

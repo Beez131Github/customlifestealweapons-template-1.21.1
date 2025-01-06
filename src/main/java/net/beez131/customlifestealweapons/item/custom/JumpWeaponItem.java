@@ -28,10 +28,10 @@ public class JumpWeaponItem extends SwordItem {
                 // Check if the weapon is in the offhand or mainhand
                 if (hand == Hand.MAIN_HAND) {
                     // Apply Jump Boost and Dolphin's Grace when held in the main hand
-                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 100, 2));  // Jump Boost level 10
+                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 100, 2));  // Jump Boost
                 } else if (hand == Hand.OFF_HAND) {
                     // Apply Levitation when held in the offhand
-                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 30, 19));  // Levitation level 1
+                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 30, 19));  // Levitation
                 }
 
                 // Set cooldown (200 ticks = 10 seconds)
@@ -44,6 +44,7 @@ public class JumpWeaponItem extends SwordItem {
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable("tooltip.customlifestealweapons.jump.tooltip"));
+        tooltip.add(Text.translatable("tooltip.customlifestealweapons.featherstep.tooltip"));
         super.appendTooltip(stack, context, tooltip, type);
     }
 }

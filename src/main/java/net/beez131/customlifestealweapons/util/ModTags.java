@@ -12,9 +12,6 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_AMETHYST_TOOL = createTag("needs_amethyst_tool");
         public static final TagKey<Block> INCORRECT_FOR_AMETHYST_TOOL = createTag("incorrect_for_amethyst_tool");
 
-        public static final TagKey<Block> NEEDS_COPPER_TOOL = createTag("needs_copper_tool");
-        public static final TagKey<Block> INCORRECT_FOR_COPPER_TOOL = createTag("incorrect_for_copper_tool");
-
         public static final TagKey<Block> NEEDS_QUARTZ_TOOL = createTag("needs_quartz_tool");
         public static final TagKey<Block> INCORRECT_FOR_QUARTZ_TOOL = createTag("incorrect_for_quartz_tool");
 
@@ -39,11 +36,20 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_AETHERWAVE_TOOL = createTag("needs_aetherwave_tool");
         public static final TagKey<Block> INCORRECT_FOR_AETHERWAVE_TOOL = createTag("incorrect_for_aetherwave_tool");
 
+        public static final TagKey<Block> NEEDS_ASCEND_TOOL = createTag("needs_aetherwave_tool");
+        public static final TagKey<Block> INCORRECT_FOR_ASCEND_TOOL = createTag("incorrect_for_aetherwave_tool");
+
+        public static final TagKey<Block> NEEDS_RAPID_TOOL = createTag("needs_aetherwave_tool");
+        public static final TagKey<Block> INCORRECT_FOR_RAPID_TOOL = createTag("incorrect_for_aetherwave_tool");
+
         public static final TagKey<Block> NEEDS_FLIGHT_TOOL = createTag("needs_flight_tool");
         public static final TagKey<Block> INCORRECT_FOR_FLIGHT_TOOL = createTag("incorrect_for_flight_tool");
 
         public static final TagKey<Block> NEEDS_RESISTANCE_TOOL = createTag("needs_resistance_tool");
         public static final TagKey<Block> INCORRECT_FOR_RESISTANCE_TOOL = createTag("incorrect_for_resistance_tool");
+
+        public static final TagKey<Block> NEEDS_COPPER_TOOL = createTag("needs_copper_tool");
+        public static final TagKey<Block> INCORRECT_FOR_COPPER_TOOL = createTag("incorrect_for_copper_tool");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(Customlifestealweapons.MOD_ID, name));
