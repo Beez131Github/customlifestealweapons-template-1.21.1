@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "combat ",
+  "ingredients": [
+    {
+      "item": "customlifestealweapons:resistance_sword"
+    },
+    {
+      "item": "customlifestealweapons:speed_sword"
+    }
+  ],
+  "result": {
+    "id": "customlifestealweapons:rapidaegis_sword",
+    "count": 1
+  }
+}
