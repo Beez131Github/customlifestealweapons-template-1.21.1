@@ -17,6 +17,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.SHARP_WEAPON_ENCHANTABLE)
                 .add(ModItems.ECHO_KNIFE)
                 .add(ModItems.COPPER_KNIFE)
+                .add(ModItems.TYPHON_SWORD)
                 .add(ModItems.QUARTZ_KNIFE)
                 .add(ModItems.POISON_AXE)
                 .add(ModItems.VISION_AXE)
@@ -30,8 +31,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.ASCENDZEPHYR_SWORD)
                 .add(ModItems.PRAESLEAP_SWORD)
                 .add(ModItems.HUNGER_AXE)
+                .add(ModItems.PHOBOS_AXE)
                 .add(ModItems.AMETHYST_KNIFE);
         getOrCreateTagBuilder(ItemTags.DURABILITY_ENCHANTABLE)
+                .add(ModItems.TYPHON_SWORD)
                 .add(ModItems.ECHO_KNIFE)
                 .add(ModItems.HUNGER_AXE)
                 .add(ModItems.COPPER_KNIFE)
@@ -47,8 +50,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.RESISTANCE_SWORD)
                 .add(ModItems.RAPIDAEGIS_SWORD)
                 .add(ModItems.PRAESLEAP_SWORD)
+                .add(ModItems.PHOBOS_AXE)
                 .add(ModItems.AMETHYST_KNIFE);
         getOrCreateTagBuilder(ItemTags.SWORD_ENCHANTABLE)
+                .add(ModItems.TYPHON_SWORD)
                 .add(ModItems.JUMP_SWORD)
                 .add(ModItems.SPEED_SWORD)
                 .add(ModItems.AETHERWAVE_SWORD)
@@ -61,7 +66,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.HUNGER_AXE)
                 .add(ModItems.WEAKNESS_AXE)
                 .add(ModItems.POISON_AXE)
-                .add(ModItems.VISION_AXE);
+                .add(ModItems.VISION_AXE)
+                .add(ModItems.PHOBOS_AXE);
 
 
     }

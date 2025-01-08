@@ -4,6 +4,7 @@ import net.beez131.customlifestealweapons.Customlifestealweapons;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -14,12 +15,8 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
     public static final Block OBSIDITE = registerBlock("obsidite",
-            new Block(AbstractBlock.Settings.create()
-                    .strength(50f, 1200f) // strength and explosion resistance
-                    .requiresTool() // Requires a tool to break
-                    .sounds(BlockSoundGroup.DEEPSLATE) // Deepslate-like sound
-                    .mapColor(net.minecraft.block.MapColor.BLACK) // Black map color
-                    .luminance(state -> 0))); // No light emitted
+            new Block(AbstractBlock.Settings.copy(Blocks.OBSIDIAN)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

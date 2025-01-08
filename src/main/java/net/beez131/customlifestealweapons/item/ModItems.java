@@ -43,6 +43,10 @@ public class ModItems {
             new VisionAxeItem(ModToolMaterials.VISION, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.VISION, 5, -3.0f))));
 
+    public static final Item PHOBOS_AXE = registerItem("phobos_axe",
+            new PhobosAxeItem(ModToolMaterials.PHOBOS, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.PHOBOS, 7, -3.0f))));
+
     public static final Item SPEED_SWORD = registerItem("speed_sword",
             new SpeedSwordItem(ModToolMaterials.SPEED, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.SPEED, 3, -2.3f))));
@@ -74,6 +78,10 @@ public class ModItems {
     public static final Item RESISTANCE_SWORD = registerItem("resistance_sword",
             new ResistanceSwordItem(ModToolMaterials.RESISTANCE, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RESISTANCE, 4, -2.5f))));
+
+    public static final Item TYPHON_SWORD = registerItem("typhon_sword",
+            new TyphonSwordItem(ModToolMaterials.TYPHON, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.TYPHON, 6, -2.2f))));
 
 
     // Shards

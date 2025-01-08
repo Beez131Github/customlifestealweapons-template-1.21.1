@@ -26,6 +26,8 @@ public enum ModToolMaterials implements ToolMaterial {
     ASCEND(ModTags.Blocks.INCORRECT_FOR_ASCEND_TOOL, 4062, 6.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FLINT)),
     RAPID(ModTags.Blocks.INCORRECT_FOR_RAPID_TOOL, 4062, 6.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FLINT)),
     PRAES(ModTags.Blocks.INCORRECT_FOR_PRAES_TOOL, 4062, 6.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FLINT)),
+    TYPHON(ModTags.Blocks.INCORRECT_FOR_TYPHON_TOOL, 8124, 7.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FLINT)),
+    PHOBOS(ModTags.Blocks.INCORRECT_FOR_PHOBOS_TOOL, 8124, 7.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FLINT)),
     FLIGHT(ModTags.Blocks.INCORRECT_FOR_FLIGHT_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FEATHER)),
     RESISTANCE(ModTags.Blocks.INCORRECT_FOR_RESISTANCE_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.OBSIDIAN)),
     POISON(ModTags.Blocks.INCORRECT_FOR_POISON_TOOL, 4062, 1.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FLINT));

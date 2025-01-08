@@ -15,6 +15,9 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_QUARTZ_TOOL = createTag("needs_quartz_tool");
         public static final TagKey<Block> INCORRECT_FOR_QUARTZ_TOOL = createTag("incorrect_for_quartz_tool");
 
+        public static final TagKey<Block> NEEDS_TYPHON_TOOL = createTag("needs_typhon_tool");
+        public static final TagKey<Block> INCORRECT_FOR_TYPHON_TOOL = createTag("incorrect_for_typhon_tool");
+
         public static final TagKey<Block> NEEDS_ECHO_TOOL = createTag("needs_echo_tool");
         public static final TagKey<Block> INCORRECT_FOR_ECHO_TOOL = createTag("incorrect_for_echo_tool");
 
@@ -42,8 +45,11 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_PRAES_TOOL = createTag("needs_praes_tool");
         public static final TagKey<Block> INCORRECT_FOR_PRAES_TOOL = createTag("incorrect_for_praes_tool");
 
-        public static final TagKey<Block> NEEDS_ASCEND_TOOL = createTag("needs_aetherwave_tool");
-        public static final TagKey<Block> INCORRECT_FOR_ASCEND_TOOL = createTag("incorrect_for_aetherwave_tool");
+        public static final TagKey<Block> NEEDS_ASCEND_TOOL = createTag("needs_phobos_tool");
+        public static final TagKey<Block> INCORRECT_FOR_ASCEND_TOOL = createTag("incorrect_for_phobos_tool");
+
+        public static final TagKey<Block> NEEDS_PHOBOS_TOOL = createTag("needs_aetherwave_tool");
+        public static final TagKey<Block> INCORRECT_FOR_PHOBOS_TOOL = createTag("incorrect_for_aetherwave_tool");
 
         public static final TagKey<Block> NEEDS_RAPID_TOOL = createTag("needs_aetherwave_tool");
         public static final TagKey<Block> INCORRECT_FOR_RAPID_TOOL = createTag("incorrect_for_aetherwave_tool");

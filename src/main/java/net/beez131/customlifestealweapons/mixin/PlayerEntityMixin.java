@@ -34,6 +34,8 @@ public class PlayerEntityMixin {
                     || offHand.getItem() instanceof SpeedSwordItem
                     || mainHand.getItem() instanceof AetherWaveSwordItem
                     || offHand.getItem() instanceof AetherWaveSwordItem
+                    || mainHand.getItem() instanceof TyphonSwordItem
+                    || offHand.getItem() instanceof TyphonSwordItem
                     || mainHand.getItem() instanceof RapidAegisSwordItem
                     || offHand.getItem() instanceof RapidAegisSwordItem;
 
@@ -55,6 +57,8 @@ public class PlayerEntityMixin {
                     || offHand.getItem() instanceof RapidAegisSwordItem
                     || mainHand.getItem() instanceof ResistanceSwordItem
                     || offHand.getItem() instanceof ResistanceSwordItem
+                    || mainHand.getItem() instanceof TyphonSwordItem
+                    || offHand.getItem() instanceof TyphonSwordItem
                     || mainHand.getItem() instanceof PraesLeapSwordItem
                     || offHand.getItem() instanceof PraesLeapSwordItem;
 
@@ -75,7 +79,7 @@ public class PlayerEntityMixin {
 
             boolean isHoldingSlowFallingSword =
                     offHand.getItem() instanceof FlySwordItem
-                    || offHand.getItem() instanceof AscendZephyrSwordItem;
+                    || offHand.getItem() instanceof AscendZephyrSwordItem || offHand.getItem() instanceof TyphonSwordItem;
 
             if (isHoldingSlowFallingSword) {
                 player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 2, 0, false, true));
@@ -100,6 +104,8 @@ public class PlayerEntityMixin {
                     || offHand.getItem() instanceof JumpWeaponItem
                     || mainHand.getItem() instanceof AscendZephyrSwordItem
                     || offHand.getItem() instanceof AscendZephyrSwordItem
+                    || mainHand.getItem() instanceof TyphonSwordItem
+                    || offHand.getItem() instanceof TyphonSwordItem
                     || mainHand.getItem() instanceof PraesLeapSwordItem
                     || offHand.getItem() instanceof PraesLeapSwordItem;
 
@@ -114,7 +120,7 @@ public class PlayerEntityMixin {
         // Ensure the entity is a player
         if ((Object) this instanceof PlayerEntity player) {
             boolean isHoldingFallDamageReductionItem = player.getInventory().containsAny(stack ->
-                    stack.getItem() instanceof JumpWeaponItem || stack.getItem() instanceof AscendZephyrSwordItem || stack.getItem() instanceof AetherWaveSwordItem || stack.getItem() instanceof PraesLeapSwordItem
+                    stack.getItem() instanceof JumpWeaponItem || stack.getItem() instanceof AscendZephyrSwordItem || stack.getItem() instanceof AetherWaveSwordItem || stack.getItem() instanceof PraesLeapSwordItem || stack.getItem() instanceof TyphonSwordItem
             );
 
             if (isHoldingFallDamageReductionItem) {
