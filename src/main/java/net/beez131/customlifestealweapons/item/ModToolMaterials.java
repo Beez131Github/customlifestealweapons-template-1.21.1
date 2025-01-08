@@ -1,6 +1,7 @@
 package net.beez131.customlifestealweapons.item;
 
 import com.google.common.base.Suppliers;
+import net.beez131.customlifestealweapons.block.ModBlocks;
 import net.beez131.customlifestealweapons.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.item.Items;
@@ -17,20 +18,20 @@ public enum ModToolMaterials implements ToolMaterial {
     COPPER(ModTags.Blocks.INCORRECT_FOR_COPPER_TOOL, 131, 1.0F, 1.0F, 15, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
     QUARTZ(ModTags.Blocks.INCORRECT_FOR_QUARTZ_TOOL, 1561, 1.0F, 3.0F, 25, () -> Ingredient.ofItems(Items.QUARTZ)),
     ECHO(ModTags.Blocks.INCORRECT_FOR_ECHO_TOOL, 2031, 1.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.ECHO_SHARD)),
-    WEAKNESS(ModTags.Blocks.INCORRECT_FOR_WEAKNESS_TOOL, 4062, 10.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FERMENTED_SPIDER_EYE)),
-    HUNGER(ModTags.Blocks.INCORRECT_FOR_HUNGER_TOOL, 4062, 10.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.ROTTEN_FLESH)),
-    VISION(ModTags.Blocks.INCORRECT_FOR_VISION_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.GLOWSTONE_DUST)),
-    SPEED(ModTags.Blocks.INCORRECT_FOR_SPEED_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.SUGAR)),
-    JUMP(ModTags.Blocks.INCORRECT_FOR_JUMP_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.RABBIT_FOOT)),
-    AETHER(ModTags.Blocks.INCORRECT_FOR_AETHERWAVE_TOOL, 4062, 6.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FLINT)),
-    ASCEND(ModTags.Blocks.INCORRECT_FOR_ASCEND_TOOL, 4062, 6.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FLINT)),
-    RAPID(ModTags.Blocks.INCORRECT_FOR_RAPID_TOOL, 4062, 6.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FLINT)),
-    PRAES(ModTags.Blocks.INCORRECT_FOR_PRAES_TOOL, 4062, 6.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FLINT)),
-    TYPHON(ModTags.Blocks.INCORRECT_FOR_TYPHON_TOOL, 8124, 7.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FLINT)),
-    PHOBOS(ModTags.Blocks.INCORRECT_FOR_PHOBOS_TOOL, 8124, 7.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FLINT)),
-    FLIGHT(ModTags.Blocks.INCORRECT_FOR_FLIGHT_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FEATHER)),
-    RESISTANCE(ModTags.Blocks.INCORRECT_FOR_RESISTANCE_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.OBSIDIAN)),
-    POISON(ModTags.Blocks.INCORRECT_FOR_POISON_TOOL, 4062, 1.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.FLINT));
+    WEAKNESS(ModTags.Blocks.INCORRECT_FOR_WEAKNESS_TOOL, 4062, 10.0F, 4.0F, 30, () -> Ingredient.ofItems(ModBlocks.OBSIDITE)),
+    HUNGER(ModTags.Blocks.INCORRECT_FOR_HUNGER_TOOL, 4062, 10.0F, 4.0F, 30, () -> Ingredient.ofItems(ModBlocks.OBSIDITE)),
+    VISION(ModTags.Blocks.INCORRECT_FOR_VISION_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(ModBlocks.OBSIDITE)),
+    SPEED(ModTags.Blocks.INCORRECT_FOR_SPEED_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(ModBlocks.OBSIDITE)),
+    JUMP(ModTags.Blocks.INCORRECT_FOR_JUMP_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(ModBlocks.OBSIDITE)),
+    AETHER(ModTags.Blocks.INCORRECT_FOR_AETHERWAVE_TOOL, 4062, 6.0F, 4.0F, 30, () -> Ingredient.ofItems(ModBlocks.OBSIDITE)),
+    ASCEND(ModTags.Blocks.INCORRECT_FOR_ASCEND_TOOL, 4062, 6.0F, 4.0F, 30, () -> Ingredient.ofItems(ModBlocks.OBSIDITE)),
+    RAPID(ModTags.Blocks.INCORRECT_FOR_RAPID_TOOL, 4062, 6.0F, 4.0F, 30, () -> Ingredient.ofItems(ModBlocks.OBSIDITE)),
+    PRAES(ModTags.Blocks.INCORRECT_FOR_PRAES_TOOL, 4062, 6.0F, 4.0F, 30, () -> Ingredient.ofItems(ModBlocks.OBSIDITE)),
+    TYPHON(ModTags.Blocks.INCORRECT_FOR_TYPHON_TOOL, 8124, 7.0F, 4.0F, 30, () -> Ingredient.ofItems(ModBlocks.OBSIDITE)),
+    PHOBOS(ModTags.Blocks.INCORRECT_FOR_PHOBOS_TOOL, 8124, 7.0F, 4.0F, 30, () -> Ingredient.ofItems(ModBlocks.OBSIDITE)),
+    FLIGHT(ModTags.Blocks.INCORRECT_FOR_FLIGHT_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(ModBlocks.OBSIDITE)),
+    RESISTANCE(ModTags.Blocks.INCORRECT_FOR_RESISTANCE_TOOL, 4062, 5.0F, 4.0F, 30, () -> Ingredient.ofItems(ModBlocks.OBSIDITE)),
+    POISON(ModTags.Blocks.INCORRECT_FOR_POISON_TOOL, 4062, 1.0F, 4.0F, 30, () -> Ingredient.ofItems(ModBlocks.OBSIDITE));
 
 
     private final TagKey<Block> inverseTag;

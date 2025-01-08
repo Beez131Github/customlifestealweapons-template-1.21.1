@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "combat",
+  "key": {
+    "#": {
+      "item": "minecraft:cobbled_deepslate"
+    },
+    "*": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "   ",
+    "*# ",
+    "#* "
+  ],
+  "result": {
+    "count": 9,
+    "id": "customlifestealweapons:obsidite"
+  }
+}

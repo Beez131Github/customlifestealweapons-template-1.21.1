@@ -107,6 +107,7 @@ public class ModItems {
             entries.add(WEAKNESS_AXE);
             entries.add(VISION_AXE);
             entries.add(HUNGER_AXE);
+            entries.add(PHOBOS_AXE);
             entries.add(SPEED_SWORD);
             entries.add(JUMP_SWORD);
             entries.add(FLIGHT_SWORD);
@@ -115,6 +116,7 @@ public class ModItems {
             entries.add(RAPIDAEGIS_SWORD);
             entries.add(AETHERWAVE_SWORD);
             entries.add(PRAESLEAP_SWORD);
+            entries.add(TYPHON_SWORD);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(POISON_SHARD);
