@@ -45,6 +45,7 @@ public class AetherWaveSwordItem extends SwordItem {
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {;
         tooltip.add(Text.translatable("tooltip.customlifestealweapons.speed.tooltip"));
         tooltip.add(Text.translatable("tooltip.customlifestealweapons.jump.tooltip"));
+        tooltip.add(Text.translatable("tooltip.customlifestealweapons.featherstep.tooltip"));
         super.appendTooltip(stack, context, tooltip, type);
     }
 }

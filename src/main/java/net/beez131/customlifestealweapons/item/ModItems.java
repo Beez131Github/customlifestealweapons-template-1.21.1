@@ -2,8 +2,6 @@ package net.beez131.customlifestealweapons.item;
 
 import net.beez131.customlifestealweapons.Customlifestealweapons;
 import net.beez131.customlifestealweapons.item.custom.*;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -29,17 +27,21 @@ public class ModItems {
             new AxeItem(ModToolMaterials.ECHO, new Item.Settings()
                     .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.ECHO, 2, -2.1f))));
 
-    public static final Item POISON_KNIFE = registerItem("poison_knife",
+    public static final Item POISON_AXE = registerItem("poison_axe",
             new PoisonWeaponItem(ModToolMaterials.POISON, new Item.Settings()
-                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.POISON, 2, -2.1f))));
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.POISON, 5, -3.0f))));
 
     public static final Item WEAKNESS_AXE = registerItem("weakness_axe",
             new WeaknessAxeItem(ModToolMaterials.WEAKNESS, new Item.Settings()
                     .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.WEAKNESS, 5, -3.0f))));
 
-    public static final Item VISION_SWORD = registerItem("vision_sword",
-            new VisionSwordItem(ModToolMaterials.VISION, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.VISION, 3, -2.4f))));
+    public static final Item HUNGER_AXE = registerItem("hunger_axe",
+            new WeaknessAxeItem(ModToolMaterials.HUNGER, new Item.Settings()
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.HUNGER, 5, -3.0f))));
+
+    public static final Item VISION_AXE = registerItem("vision_axe",
+            new VisionAxeItem(ModToolMaterials.VISION, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.VISION, 5, -3.0f))));
 
     public static final Item SPEED_SWORD = registerItem("speed_sword",
             new SpeedSwordItem(ModToolMaterials.SPEED, new Item.Settings()
@@ -51,15 +53,19 @@ public class ModItems {
 
     public static final Item ASCENDZEPHYR_SWORD = registerItem("ascendzephyr_sword",
             new AscendZephyrSwordItem(ModToolMaterials.ASCEND, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.ASCEND, 4, -2.3f))));
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.ASCEND, 4, -2.4f))));
 
-    public static final Item RAPID_SWORD = registerItem("rapidaegis_sword",
+    public static final Item RAPIDAEGIS_SWORD = registerItem("rapidaegis_sword",
             new RapidAegisSwordItem(ModToolMaterials.RAPID, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RAPID, 4, -2.3f))));
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RAPID, 4, -2.4f))));
 
     public static final Item AETHERWAVE_SWORD = registerItem("aetherwave_sword",
             new AetherWaveSwordItem(ModToolMaterials.AETHER, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.AETHER, 4, -2.3f))));
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.AETHER, 4, -2.4f))));
+
+    public static final Item PRAESLEAP_SWORD = registerItem("praesleap_sword",
+            new PraesLeapSwordItem(ModToolMaterials.PRAES, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.PRAES, 5, -2.6f))));
 
     public static final Item FLIGHT_SWORD = registerItem("flight_sword",
             new FlySwordItem(ModToolMaterials.FLIGHT, new Item.Settings()
@@ -67,7 +73,7 @@ public class ModItems {
 
     public static final Item RESISTANCE_SWORD = registerItem("resistance_sword",
             new ResistanceSwordItem(ModToolMaterials.RESISTANCE, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RESISTANCE, 3, -2.5f))));
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RESISTANCE, 4, -2.5f))));
 
 
     // Shards
@@ -89,16 +95,18 @@ public class ModItems {
             entries.add(ECHO_KNIFE);
             entries.add(QUARTZ_KNIFE);
             entries.add(COPPER_KNIFE);
-            entries.add(POISON_KNIFE);
+            entries.add(POISON_AXE);
             entries.add(WEAKNESS_AXE);
-            entries.add(VISION_SWORD);
+            entries.add(VISION_AXE);
+            entries.add(HUNGER_AXE);
             entries.add(SPEED_SWORD);
             entries.add(JUMP_SWORD);
             entries.add(FLIGHT_SWORD);
             entries.add(RESISTANCE_SWORD);
             entries.add(ASCENDZEPHYR_SWORD);
-            entries.add(RAPID_SWORD);
+            entries.add(RAPIDAEGIS_SWORD);
             entries.add(AETHERWAVE_SWORD);
+            entries.add(PRAESLEAP_SWORD);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(POISON_SHARD);

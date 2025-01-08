@@ -54,7 +54,9 @@ public class PlayerEntityMixin {
             boolean isHoldingResistanceSword = mainHand.getItem() instanceof RapidAegisSwordItem
                     || offHand.getItem() instanceof RapidAegisSwordItem
                     || mainHand.getItem() instanceof ResistanceSwordItem
-                    || offHand.getItem() instanceof ResistanceSwordItem;
+                    || offHand.getItem() instanceof ResistanceSwordItem
+                    || mainHand.getItem() instanceof PraesLeapSwordItem
+                    || offHand.getItem() instanceof PraesLeapSwordItem;
 
             if (isHoldingResistanceSword) {
                 // Apply Speed I effect (duration = 2 seconds, refreshes every tick)
@@ -97,7 +99,9 @@ public class PlayerEntityMixin {
                     || offHand.getItem() instanceof AetherWaveSwordItem
                     || offHand.getItem() instanceof JumpWeaponItem
                     || mainHand.getItem() instanceof AscendZephyrSwordItem
-                    || offHand.getItem() instanceof AscendZephyrSwordItem;
+                    || offHand.getItem() instanceof AscendZephyrSwordItem
+                    || mainHand.getItem() instanceof PraesLeapSwordItem
+                    || offHand.getItem() instanceof PraesLeapSwordItem;
 
             if (isHoldingValidWeapon) {
                 return original * 2f; // Double the step height
@@ -109,30 +113,8 @@ public class PlayerEntityMixin {
     private void handleFallDamageMixin(float fallDistance, float damageMultiplier, DamageSource damageSource, CallbackInfoReturnable<Boolean> cir) {
         // Ensure the entity is a player
         if ((Object) this instanceof PlayerEntity player) {
-            // Check if the player's inventory contains an item that modifies fall damage
-            boolean isHoldingFallDamageIncreaseItem = player.getInventory().containsAny(stack ->
-                    stack.getItem() instanceof RapidAegisSwordItem || stack.getItem() instanceof ResistanceSwordItem
-            );
-
-            if (isHoldingFallDamageIncreaseItem) {
-                // Adjust fall damage to start at 2 blocks
-                float adjustedFallDistance = fallDistance - 1; // Shift damage threshold by 1 block earlier
-
-                // If adjusted fall distance is <= 1 block, no damage
-                if (adjustedFallDistance <= 1) {
-                    cir.setReturnValue(false); // Cancels fall damage handling
-                    return;
-                }
-
-                // Calculate fall damage: 2 blocks = 1 damage, 3 blocks = 2 damage, etc.
-                float damage = (adjustedFallDistance - 1);
-                player.damage(player.getDamageSources().fall(), damage);
-                cir.setReturnValue(true); // Mark fall damage as handled
-                return;
-            }
-
             boolean isHoldingFallDamageReductionItem = player.getInventory().containsAny(stack ->
-                    stack.getItem() instanceof JumpWeaponItem || stack.getItem() instanceof AscendZephyrSwordItem
+                    stack.getItem() instanceof JumpWeaponItem || stack.getItem() instanceof AscendZephyrSwordItem || stack.getItem() instanceof AetherWaveSwordItem || stack.getItem() instanceof PraesLeapSwordItem
             );
 
             if (isHoldingFallDamageReductionItem) {

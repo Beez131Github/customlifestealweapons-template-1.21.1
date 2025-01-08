@@ -5,13 +5,15 @@
   "item.customlifestealweapons.echo_knife": "Echo Knife",
   "item.customlifestealweapons.poison_shard": "Poison Shard",
   "item.customlifestealweapons.weakness_axe": "Weakness Axe",
-  "item.customlifestealweapons.vision_sword": "Vision Sword",
+  "item.customlifestealweapons.vision_axe": "Vision Axe",
   "item.customlifestealweapons.weakness_shard": "Weakness Shard",
   "item.customlifestealweapons.glow_shard": "Glow Shard",
   "item.customlifestealweapons.speed_sword": "Speed Sword",
   "item.customlifestealweapons.jump_sword": "Jump Sword",
-  "item.customlifestealweapons.poison_knife": "Poison Knife",
+  "item.customlifestealweapons.poison_axe": "Poison Axe",
+  "item.customlifestealweapons.hunger_axe": "Hunger Axe",
   "item.customlifestealweapons.resistance_sword": "Resistance Sword",
+  "item.customlifestealweapons.praesleap_sword": "Preas Leap Sword",
   "item.customlifestealweapons.aetherwave_sword": "Aetherwave Sword",
   "item.customlifestealweapons.flight_sword": "Flight Sword",
   "item.customlifestealweapons.ascendzephyr_sword": "Ascend Zephyr Sword",
@@ -21,5 +23,6 @@
   "tooltip.customlifestealweapons.slow_falling.tooltip": "§6(+)§  §dSlow Falling (Offhand only)§",
   "tooltip.customlifestealweapons.featherstep.tooltip": "§6(+)§  §9Featherstep (When in inventory)§",
   "tooltip.customlifestealweapons.heavystep.tooltip": "§4(-)§  §8Heavystep (When in inventory)§",
-  "tooltip.customlifestealweapons.jump.tooltip": "§6(+)§  §2Instant Jump (Offhand/Mainhand only)§"
+  "tooltip.customlifestealweapons.jump.tooltip": "§6(+)§  §2Instant Jump (Offhand/Mainhand only)§",
+  "block.customlifestealweapons.obsidite": "Obsidite"
 }

@@ -1,0 +1,16 @@
+{
+"type": "minecraft:crafting_shapeless",
+"category": "combat ",
+"ingredients": [
+{
+"item": "customlifestealweapons:jump_sword"
+},
+{
+"item": "customlifestealweapons:resistance_sword"
+}
+],
+"result": {
+"id": "customlifestealweapons:praesleap_sword",
+"count": 1
+}
+}

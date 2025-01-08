@@ -1,5 +1,6 @@
 package net.beez131.customlifestealweapons;
 
+import net.beez131.customlifestealweapons.block.ModBlocks;
 import net.beez131.customlifestealweapons.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -14,5 +15,6 @@ public class Customlifestealweapons implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }

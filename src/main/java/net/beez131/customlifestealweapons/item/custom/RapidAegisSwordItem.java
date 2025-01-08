@@ -45,7 +45,7 @@ public class RapidAegisSwordItem extends SwordItem {
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {;
         tooltip.add(Text.translatable("tooltip.customlifestealweapons.speed.tooltip"));
         tooltip.add(Text.translatable("tooltip.customlifestealweapons.resistance.tooltip"));
-        tooltip.add(Text.translatable("tooltip.customlifestealweapons.heavystep.tooltip")); //heavystep
+        //tooltip.add(Text.translatable("tooltip.customlifestealweapons.heavystep.tooltip"));
         super.appendTooltip(stack, context, tooltip, type);
     }
 }

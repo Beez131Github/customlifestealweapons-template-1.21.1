@@ -1,17 +1,18 @@
 package net.beez131.customlifestealweapons.item.custom;
 
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.AxeItem;
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ToolMaterial;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 
-public class PoisonWeaponItem extends AxeItem {
+public class HungerAxeItem extends AxeItem {
     private static final int COOLDOWN_TICKS = 200; // 10 seconds cooldown (20 ticks per second)
 
-    public PoisonWeaponItem(ToolMaterial material, Settings settings) {
+    public HungerAxeItem(ToolMaterial material, Item.Settings settings) {
         super(material, settings);
     }
 
@@ -21,8 +22,8 @@ public class PoisonWeaponItem extends AxeItem {
         if (!target.getWorld().isClient() && attacker instanceof PlayerEntity player) {
             // Check if the item is on cooldown
             if (!player.getItemCooldownManager().isCoolingDown(this)) {
-                // Apply poison effect to the target
-                target.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 100, 1));
+                // Apply Weakness effect for 20 seconds (400 ticks)
+                target.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 100, 0));
 
                 // Start cooldown for the item
                 player.getItemCooldownManager().set(this, COOLDOWN_TICKS);

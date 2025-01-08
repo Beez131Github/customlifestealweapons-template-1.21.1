@@ -3,8 +3,8 @@
     "customlifestealweapons:echo_knife",
     "customlifestealweapons:copper_knife",
     "customlifestealweapons:quartz_knife",
-    "customlifestealweapons:poison_knife",
-    "customlifestealweapons:vision_sword",
+    "customlifestealweapons:poison_axe",
+    "customlifestealweapons:vision_axe",
     "customlifestealweapons:weakness_axe",
     "customlifestealweapons:jump_sword",
     "customlifestealweapons:speed_sword",
@@ -13,6 +13,8 @@
     "customlifestealweapons:resistance_sword",
     "customlifestealweapons:rapidaegis_sword",
     "customlifestealweapons:ascendzephyr_sword",
+    "customlifestealweapons:praesleap_sword",
+    "customlifestealweapons:hunger_axe",
     "customlifestealweapons:amethyst_knife"
   ]
 }

@@ -56,7 +56,7 @@ public class AscendZephyrSwordItem extends SwordItem {
                 }
             }
 
-            user.getItemCooldownManager().set(this, 200);
+            user.getItemCooldownManager().set(this, 160);
             return TypedActionResult.success(stack);
         }
 

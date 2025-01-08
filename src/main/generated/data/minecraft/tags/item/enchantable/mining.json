@@ -1,5 +1,8 @@
 {
   "values": [
-    "customlifestealweapons:weakness_axe"
+    "customlifestealweapons:hunger_axe",
+    "customlifestealweapons:weakness_axe",
+    "customlifestealweapons:poison_axe",
+    "customlifestealweapons:vision_axe"
   ]
 }

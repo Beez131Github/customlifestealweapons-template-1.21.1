@@ -1,5 +1,5 @@
-// 1.21.1	2025-01-05T20:53:02.5949064	Custom Lifesteal Weapons/Tags for minecraft:item
-9fde35095bfa517c1c5d0eb6db41d82daa5e2194 data\minecraft\tags\item\enchantable\sharp_weapon.json
-2162595ae6316b29b8a175af9521c054db491289 data\minecraft\tags\item\enchantable\durability.json
-4ac6356dd66dfc3b80e75c21c53297aa36481e79 data\minecraft\tags\item\enchantable\sword.json
-fc835e107f9d0cc5d797b4cfa6c6c37ea4908997 data\minecraft\tags\item\enchantable\mining.json
+// 1.21.1	2025-01-08T09:28:46.3140372	Custom Lifesteal Weapons/Tags for minecraft:item
+2b899399bab8ea5e6fa82d53dca825195dbb7172 data\minecraft\tags\item\enchantable\sharp_weapon.json
+d6408beba891e5d94b1b4ab74e927c30b58882c4 data\minecraft\tags\item\enchantable\durability.json
+45b3412137540e9021ceb316d27eb41fcc507862 data\minecraft\tags\item\enchantable\sword.json
+5c0f9984e01f3646a35175df65bcf98b58f42db8 data\minecraft\tags\item\enchantable\mining.json

@@ -27,6 +27,9 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_WEAKNESS_TOOL = createTag("needs_weakness_tool");
         public static final TagKey<Block> INCORRECT_FOR_WEAKNESS_TOOL = createTag("incorrect_for_weakness_tool");
 
+        public static final TagKey<Block> NEEDS_HUNGER_TOOL = createTag("needs_hunger_tool");
+        public static final TagKey<Block> INCORRECT_FOR_HUNGER_TOOL = createTag("incorrect_for_hunger_tool");
+
         public static final TagKey<Block> NEEDS_SPEED_TOOL = createTag("needs_speed_tool");
         public static final TagKey<Block> INCORRECT_FOR_SPEED_TOOL = createTag("incorrect_for_speed_tool");
 
@@ -35,6 +38,9 @@ public class ModTags {
 
         public static final TagKey<Block> NEEDS_AETHERWAVE_TOOL = createTag("needs_aetherwave_tool");
         public static final TagKey<Block> INCORRECT_FOR_AETHERWAVE_TOOL = createTag("incorrect_for_aetherwave_tool");
+
+        public static final TagKey<Block> NEEDS_PRAES_TOOL = createTag("needs_praes_tool");
+        public static final TagKey<Block> INCORRECT_FOR_PRAES_TOOL = createTag("incorrect_for_praes_tool");
 
         public static final TagKey<Block> NEEDS_ASCEND_TOOL = createTag("needs_aetherwave_tool");
         public static final TagKey<Block> INCORRECT_FOR_ASCEND_TOOL = createTag("incorrect_for_aetherwave_tool");
