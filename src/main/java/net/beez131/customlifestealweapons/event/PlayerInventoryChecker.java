@@ -4,6 +4,7 @@ import net.beez131.customlifestealweapons.item.custom.PhobosAxeItem;
 import net.beez131.customlifestealweapons.item.custom.TyphonSwordItem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
 
@@ -13,81 +14,60 @@ import java.util.UUID;
 
 public class PlayerInventoryChecker {
     private static final Map<UUID, Long> explosionTimers = new HashMap<>();
-    private static final Map<UUID, Integer> gradientTimers = new HashMap<>();
+    private static final Map<UUID, Long> gradientTimers = new HashMap<>();
 
     public static void checkInventory(PlayerEntity player, World world) {
         boolean hasTyphonSword = false;
         boolean hasPhobosAxe = false;
 
-        System.out.println("Checking inventory for player: " + player.getName().getString());
-
-        // Iterate through the player's inventory to check for both items
+        // Check if the player has the required items
         for (ItemStack stack : player.getInventory().main) {
             if (stack.getItem() instanceof TyphonSwordItem) {
                 hasTyphonSword = true;
-                System.out.println("Player has Typhon Sword.");
             } else if (stack.getItem() instanceof PhobosAxeItem) {
                 hasPhobosAxe = true;
-                System.out.println("Player has Phobos Axe.");
             }
 
-            // If both items are found, break early
             if (hasTyphonSword && hasPhobosAxe) {
-                System.out.println("Player has both items.");
                 break;
             }
         }
 
-        UUID playerId = player.getUuid();
-
-        // If the player has both items, start the explosion timer
+        // Manage timers based on item presence
         if (hasTyphonSword && hasPhobosAxe) {
-            if (!world.isClient() && world instanceof ServerWorld) {
-                explosionTimers.putIfAbsent(playerId, 60L);
-                gradientTimers.put(playerId, 3); // Reset gradient timer to 3 ticks
-                System.out.println("Started explosion and gradient timers for player: " + player.getName().getString());
-            }
+            explosionTimers.putIfAbsent(player.getUuid(), 60L); // 3 seconds
+            gradientTimers.put(player.getUuid(), 3L); // Apply gradient for 3 ticks
         } else {
-            // If the player no longer has both items, cancel timers
-            explosionTimers.remove(playerId);
-            System.out.println("Removed explosion timer for player: " + player.getName().getString());
+            explosionTimers.remove(player.getUuid());
+            gradientTimers.remove(player.getUuid());
         }
     }
 
-    public static void onTick(ServerWorld serverWorld) {
-        System.out.println("Running onTick...");
+    public static void onServerTick(MinecraftServer server) {
+        System.out.println("Running global onServerTick...");
 
         // Process explosion timers
         explosionTimers.entrySet().removeIf(entry -> {
             UUID playerId = entry.getKey();
-            PlayerEntity player = serverWorld.getPlayerByUuid(playerId);
+            PlayerEntity player = server.getPlayerManager().getPlayer(playerId);
 
-            if (player == null) {
-                System.out.println("Player not found for explosion timer. Removing entry.");
-                return true;
-            }
-
-            long remainingTicks = entry.getValue() - 1;
-            System.out.println("Explosion timer for player " + player.getName().getString() + ": " + remainingTicks + " ticks remaining.");
-
-            if (remainingTicks <= 0) {
-                System.out.println("Explosion timer expired for player: " + player.getName().getString());
-                // Trigger explosion and kill the player when timer expires
-                serverWorld.createExplosion(
-                        player,
-                        player.getX(),
-                        player.getY(),
-                        player.getZ(),
-                        6.0f,
-                        true,
-                        ServerWorld.ExplosionSourceType.TNT
-                );
-                player.kill(); // Kill the player
-                System.out.println("Explosion triggered and player killed: " + player.getName().getString());
+            if (player == null || !player.isAlive()) {
+                System.out.println("Player not found or dead. Removing explosion timer for UUID: " + playerId);
                 return true; // Remove timer
             }
 
-            // Update remaining ticks
+            long remainingTicks = entry.getValue() - 1;
+
+            if (remainingTicks <= 0) {
+                System.out.println("Triggering explosion for player: " + player.getName().getString());
+                player.getWorld().createExplosion(
+                        null, player.getX(), player.getY(), player.getZ(),
+                        6.0f, true, ServerWorld.ExplosionSourceType.TNT
+                );
+                player.kill();
+                return true; // Remove timer
+            }
+
             entry.setValue(remainingTicks);
             return false;
         });
@@ -95,40 +75,24 @@ public class PlayerInventoryChecker {
         // Process gradient timers
         gradientTimers.entrySet().removeIf(entry -> {
             UUID playerId = entry.getKey();
-            PlayerEntity player = serverWorld.getPlayerByUuid(playerId);
+            PlayerEntity player = server.getPlayerManager().getPlayer(playerId);
 
             if (player == null || !player.isAlive()) {
-                System.out.println("Player not found or dead for gradient timer. Removing entry.");
-                return true;
+                System.out.println("Player not found or dead. Removing gradient timer for UUID: " + playerId);
+                return true; // Remove timer
             }
 
-            // Apply gradient effect
-            applyGradientEffect(player);
-            System.out.println("Applied gradient effect to player: " + player.getName().getString());
-
-            int remainingTicks = entry.getValue() - 1;
-            System.out.println("Gradient timer for player " + player.getName().getString() + ": " + remainingTicks + " ticks remaining.");
+            long remainingTicks = entry.getValue() - 1;
 
             if (remainingTicks <= 0) {
-                // Remove gradient effect if timer expires
-                removeGradientEffect(player);
-                System.out.println("Removed gradient effect from player: " + player.getName().getString());
-                return true;
+                System.out.println("Gradient expired for player: " + player.getName().getString());
+                return true; // Remove timer
             }
 
-            // Update remaining ticks
+            // Apply gradient effect here
+            System.out.println("Applying gradient to player: " + player.getName().getString());
             entry.setValue(remainingTicks);
             return false;
         });
-    }
-
-    private static void applyGradientEffect(PlayerEntity player) {
-        // Your logic to apply the gradient effect to the player
-        System.out.println("Applying gradient effect to player: " + player.getName().getString());
-    }
-
-    private static void removeGradientEffect(PlayerEntity player) {
-        // Your logic to remove the gradient effect from the player
-        System.out.println("Removing gradient effect from player: " + player.getName().getString());
     }
 }
