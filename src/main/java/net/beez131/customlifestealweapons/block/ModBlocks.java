@@ -17,6 +17,9 @@ public class ModBlocks {
     public static final Block OBSIDITE = registerBlock("obsidite",
             new Block(AbstractBlock.Settings.copy(Blocks.OBSIDIAN)));
 
+    public static final Block POLISHED_OBSIDITE = registerBlock("polished_obsidite",
+            new Block(AbstractBlock.Settings.copy(Blocks.OBSIDIAN)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -33,6 +36,7 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.OBSIDITE);
+            entries.add(ModBlocks.POLISHED_OBSIDITE);
         });
     }
 }

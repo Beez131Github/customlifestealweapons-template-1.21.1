@@ -26,5 +26,6 @@
   "tooltip.customlifestealweapons.featherstep.tooltip": "§6(+)§  §9Featherstep (When in inventory)§",
   "tooltip.customlifestealweapons.heavystep.tooltip": "§4(-)§  §8Heavystep (When in inventory)§",
   "tooltip.customlifestealweapons.jump.tooltip": "§6(+)§  §2Instant Jump (Offhand/Mainhand only)§",
-  "block.customlifestealweapons.obsidite": "Obsidite"
+  "block.customlifestealweapons.obsidite": "Obsidite",
+  "block.customlifestealweapons.polished_obsidite": "Polished Obsidite"
 }
