@@ -2,6 +2,7 @@
   "values": [
     "customlifestealweapons:echo_knife",
     "customlifestealweapons:copper_knife",
+    "customlifestealweapons:typhon_sword",
     "customlifestealweapons:quartz_knife",
     "customlifestealweapons:poison_axe",
     "customlifestealweapons:vision_axe",
@@ -15,6 +16,7 @@
     "customlifestealweapons:ascendzephyr_sword",
     "customlifestealweapons:praesleap_sword",
     "customlifestealweapons:hunger_axe",
+    "customlifestealweapons:phobos_axe",
     "customlifestealweapons:amethyst_knife"
   ]
 }

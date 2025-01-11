@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "nether/obtain_blaze_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:blaze_rod"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "loot": ["customlifestealweapons:into_fire_reward"]
+  }
+}

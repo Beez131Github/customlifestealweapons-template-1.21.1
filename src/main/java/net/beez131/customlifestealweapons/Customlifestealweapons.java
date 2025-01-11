@@ -1,7 +1,6 @@
 package net.beez131.customlifestealweapons;
 
 import net.beez131.customlifestealweapons.block.ModBlocks;
-import net.beez131.customlifestealweapons.event.PlayerInventoryChecker;
 import net.beez131.customlifestealweapons.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
@@ -21,11 +20,5 @@ public class Customlifestealweapons implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
-		// Register a tick event to check player inventories for deadly combinations
-		ServerTickEvents.END_WORLD_TICK.register((ServerWorld world) -> {
-			for (PlayerEntity player : world.getPlayers()) {
-				PlayerInventoryChecker.checkInventory(player, world);
-			}
-		});
 	}
 }

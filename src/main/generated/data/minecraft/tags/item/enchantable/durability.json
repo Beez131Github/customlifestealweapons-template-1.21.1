@@ -1,5 +1,6 @@
 {
   "values": [
+    "customlifestealweapons:typhon_sword",
     "customlifestealweapons:echo_knife",
     "customlifestealweapons:hunger_axe",
     "customlifestealweapons:copper_knife",
@@ -15,6 +16,7 @@
     "customlifestealweapons:resistance_sword",
     "customlifestealweapons:rapidaegis_sword",
     "customlifestealweapons:praesleap_sword",
+    "customlifestealweapons:phobos_axe",
     "customlifestealweapons:amethyst_knife"
   ]
 }
